@@ -13,6 +13,11 @@ const h2 = document.querySelector('#new-task-preview');
 button.onclick = function () {
   const newTaskName = input.value;
 
+  if (!newTaskName) {
+    alert("Digite um nome para sua task \\o/");
+    return;
+  };
+
   const newLi = `
     <div>
       <li class="my-li-class">${newTaskName}</li>
